@@ -11,10 +11,10 @@
     <!-- Tabs Container -->
     <div class="rounded-[18px] overflow-hidden bg-[#0F172A] border border-slate-800 shadow-2xl relative reveal-on-scroll">
       <!-- Tabs Nav -->
-      <div class="flex items-center bg-[#0B1220] border-b border-slate-800 px-2 pt-2">
-        <button data-tab-target="macos" class="tab-btn px-5 py-2.5 bg-[#0F172A] rounded-t-lg font-medium text-blue-400 text-[13px] border-t border-x border-slate-700/50 -mb-[1px] transition-colors">macOS / Linux</button>
-        <button data-tab-target="windows" class="tab-btn px-5 py-2.5 text-slate-500 font-medium text-[13px] border-t border-x border-transparent -mb-[1px] hover:text-slate-300 transition-colors">Windows PowerShell</button>
-        <button data-tab-target="docker" class="tab-btn px-5 py-2.5 text-slate-500 font-medium text-[13px] border-t border-x border-transparent -mb-[1px] hover:text-slate-300 transition-colors">Docker</button>
+      <div class="flex items-center gap-1.5 bg-[#0B1220] border-b border-slate-800/80 px-4 py-3">
+        <button data-tab-target="macos" class="tab-btn px-4 py-1.5 bg-slate-800 text-white rounded-lg font-medium text-[13px] transition-all outline-none focus:outline-none">macOS / Linux</button>
+        <button data-tab-target="windows" class="tab-btn px-4 py-1.5 text-slate-400 hover:text-white rounded-lg font-medium text-[13px] transition-all outline-none focus:outline-none">Windows PowerShell</button>
+        <button data-tab-target="docker" class="tab-btn px-4 py-1.5 text-slate-400 hover:text-white rounded-lg font-medium text-[13px] transition-all outline-none focus:outline-none">Docker</button>
       </div>
 
       <!-- Tab Content -->
@@ -126,11 +126,11 @@
 
         buttons.forEach((btn) => {
           if (btn === button) {
-            btn.classList.remove('text-slate-500', 'border-transparent');
-            btn.classList.add('bg-[#0F172A]', 'text-blue-400', 'border-slate-700/50');
+            btn.classList.remove('text-slate-400');
+            btn.classList.add('bg-slate-800', 'text-white');
           } else {
-            btn.classList.remove('bg-[#0F172A]', 'text-blue-400', 'border-slate-700/50');
-            btn.classList.add('text-slate-500', 'border-transparent');
+            btn.classList.remove('bg-slate-800', 'text-white');
+            btn.classList.add('text-slate-400');
           }
         });
       });
