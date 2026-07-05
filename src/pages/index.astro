@@ -2,22 +2,24 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
-import TerminalDemo from '../components/TerminalDemo.astro';
+import HowItWorks from '../components/HowItWorks.astro';
 import ProviderGrid from '../components/ProviderGrid.astro';
-import PoolModeAndQuickStart from '../components/PoolModeAndQuickStart.astro';
+import PoolMode from '../components/PoolMode.astro';
+import QuickStart from '../components/QuickStart.astro';
 import ValueStrip from '../components/ValueStrip.astro';
 import FinalCTA from '../components/FinalCTA.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Codex Proxy - One IDE. Infinite Models.">
-  <div class="bg-grid absolute inset-0 fixed z-[-2] pointer-events-none opacity-60"></div>
+  <div class="page-bg"></div>
   <Navbar />
   <main class="relative pt-8">
     <Hero />
-    <TerminalDemo />
+    <HowItWorks />
     <ProviderGrid />
-    <PoolModeAndQuickStart />
+    <PoolMode />
+    <QuickStart />
     <ValueStrip />
     <FinalCTA />
   </main>

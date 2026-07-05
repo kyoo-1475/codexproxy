@@ -1,27 +1,66 @@
 ---
-const providers = [
-  "Ollama",
-  "LM Studio",
-  "vLLM",
-  "SGLang",
-  "NVIDIA Build",
-  "OpenRouter",
-  "DeepSeek",
-  "Any OpenAI-Compatible"
-];
 ---
-<section id="providers" class="py-20 px-4 border-y border-slate-200/60 bg-white/50">
-  <div class="max-w-[1180px] mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-3">Works with the tools you love.</h2>
-    <p class="text-slate-500 text-[17px] mb-12">Run anything. Connect everything.</p>
+<section id="providers" class="py-16 md:py-24 px-4">
+  <div class="max-w-[1180px] mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-16 max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">Supported Providers</h2>
+      <p class="text-[17px] text-slate-500 leading-relaxed">
+        Works with local and remote providers. All speak OpenAI-compatible APIs. Codex Proxy can route to one or many.
+      </p>
+    </div>
 
-    <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-      {providers.map((name) => (
-        <div class="flex items-center gap-2.5 px-5 py-2.5 bg-white border border-slate-200 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-blue-200 transition-all cursor-default">
-          <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-          <span class="font-medium text-slate-700 text-sm">{name}</span>
-        </div>
-      ))}
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="card p-6 flex flex-col items-start text-left">
+        <div class="font-bold text-lg text-slate-900 mb-2">Ollama</div>
+        <p class="text-sm text-slate-500 leading-relaxed">Run models locally with Ollama.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card p-6 flex flex-col items-start text-left">
+        <div class="font-bold text-lg text-slate-900 mb-2">LM Studio</div>
+        <p class="text-sm text-slate-500 leading-relaxed">Local inference made simple.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card p-6 flex flex-col items-start text-left">
+        <div class="font-bold text-lg text-slate-900 mb-2">vLLM</div>
+        <p class="text-sm text-slate-500 leading-relaxed">High-throughput inference engine.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card p-6 flex flex-col items-start text-left">
+        <div class="font-bold text-lg text-slate-900 mb-2">SGLang</div>
+        <p class="text-sm text-slate-500 leading-relaxed">Fast, memory-efficient serving.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card p-6 flex flex-col items-start text-left">
+        <div class="font-bold text-lg text-slate-900 mb-2">NVIDIA Build</div>
+        <p class="text-sm text-slate-500 leading-relaxed">NVIDIA-hosted inference.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card p-6 flex flex-col items-start text-left">
+        <div class="font-bold text-lg text-slate-900 mb-2">OpenRouter</div>
+        <p class="text-sm text-slate-500 leading-relaxed">Access hundreds of models.</p>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card p-6 flex flex-col items-start text-left">
+        <div class="font-bold text-lg text-slate-900 mb-2">DeepSeek</div>
+        <p class="text-sm text-slate-500 leading-relaxed">Powerful models by DeepSeek.</p>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card p-6 flex flex-col items-start text-left border-indigo-100 bg-gradient-to-br from-white to-indigo-50/50">
+        <div class="font-bold text-lg text-indigo-700 mb-2">Any compatible API</div>
+        <p class="text-sm text-slate-500 leading-relaxed">Any OpenAI-compatible endpoint.</p>
+      </div>
+
     </div>
   </div>
 </section>

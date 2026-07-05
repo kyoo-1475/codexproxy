@@ -1,41 +1,58 @@
 ---
-const values = [
-  {
-    title: "Near-zero overhead",
-    description: "Minimal latency. Maximum throughput.",
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>`
-  },
-  {
-    title: "Zero dependencies",
-    description: "Pure Python. Easy to deploy anywhere.",
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-600"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>`
-  },
-  {
-    title: "Open & Secure",
-    description: "Open source and built with transparency.",
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`
-  },
-  {
-    title: "OpenAI-compatible",
-    description: "Works with any compatible backend.",
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cyan-600"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`
-  }
-];
 ---
-<section class="py-12 px-4">
+<section class="py-16 md:py-24 px-4 bg-white border-y border-slate-100">
   <div class="max-w-[1180px] mx-auto">
-    <div class="bg-white border border-blue-100 rounded-3xl shadow-sm p-2 flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
-      {values.map((v) => (
-        <div class="flex-1 p-6 lg:p-8 flex flex-col items-center lg:items-start text-center lg:text-left gap-4 hover:bg-slate-50/50 transition-colors first:rounded-t-2xl lg:first:rounded-l-2xl lg:first:rounded-tr-none last:rounded-b-2xl lg:last:rounded-r-2xl lg:last:rounded-bl-none">
-          <div class="w-10 h-10 rounded-full bg-blue-50/50 flex items-center justify-center shrink-0">
-            <Fragment set:html={v.icon} />
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Big Statement -->
+      <div class="lg:col-span-4 border-l-4 border-blue-500 pl-6">
+        <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4">
+          No FastAPI.<br />
+          No Flask.<br />
+          No Node.
+        </h3>
+        <p class="text-lg text-slate-500 font-medium">
+          No database.<br />
+          No container required.
+        </p>
+      </div>
+
+      <!-- Value Blocks -->
+      <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        
+        <div class="card p-6 border-l-[3px] border-l-blue-400">
+          <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
           </div>
-          <div>
-            <h3 class="font-semibold text-slate-900 text-[15px] mb-1">{v.title}</h3>
-            <p class="text-slate-500 text-sm">{v.description}</p>
-          </div>
+          <div class="font-bold text-slate-900 mb-1">Pure Python</div>
+          <div class="text-sm text-slate-500 leading-relaxed">Built with the standard library.</div>
         </div>
-      ))}
+        
+        <div class="card p-6 border-l-[3px] border-l-indigo-400">
+          <div class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="font-bold text-slate-900 mb-1">Single File</div>
+          <div class="text-sm text-slate-500 leading-relaxed">Easy to pack, easy to hack.</div>
+        </div>
+
+        <div class="card p-6 border-l-[3px] border-l-cyan-400">
+          <div class="w-10 h-10 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-600 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="font-bold text-slate-900 mb-1">Tiny Footprint</div>
+          <div class="text-sm text-slate-500 leading-relaxed">Low memory and CPU overhead.</div>
+        </div>
+
+        <div class="card p-6 border-l-[3px] border-l-purple-400">
+          <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="font-bold text-slate-900 mb-1">Any Environment</div>
+          <div class="text-sm text-slate-500 leading-relaxed">Runs everywhere Python runs.</div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>

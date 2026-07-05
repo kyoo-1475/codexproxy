@@ -1,0 +1,94 @@
+---
+---
+<section id="quick-start" class="py-16 md:py-24 px-4">
+  <div class="max-w-[1180px] mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-16 max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-6">Quick Start</h2>
+    </div>
+
+    <!-- Tabs Container -->
+    <div class="section-panel overflow-hidden">
+      <!-- Tabs Nav (Static Mock) -->
+      <div class="flex flex-wrap items-center bg-white border-b border-slate-200 px-4 pt-4 gap-2">
+        <div class="px-6 py-3 bg-slate-50 border-t border-x border-slate-200 rounded-t-lg font-semibold text-blue-600 text-sm -mb-[1px]">macOS / Linux</div>
+        <div class="px-6 py-3 text-slate-500 font-medium text-sm hover:text-slate-700 cursor-pointer">Windows PowerShell</div>
+        <div class="px-6 py-3 text-slate-500 font-medium text-sm hover:text-slate-700 cursor-pointer">Docker Config</div>
+        <div class="px-6 py-3 text-slate-500 font-medium text-sm hover:text-slate-700 cursor-pointer">Codex config.toml</div>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="p-6 md:p-10 bg-slate-50">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          
+          <!-- Steps -->
+          <div class="space-y-8">
+            <div>
+              <div class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">1</span>
+                Clone the repository
+              </div>
+              <div class="terminal rounded-xl">
+                <div class="p-4 font-mono text-[13px] text-slate-300">
+                  <div class="text-slate-400">git clone https://github.com/kyoo-147/codex_proxy_for_all_models.git</div>
+                  <div class="text-slate-400">cd codex_proxy_for_all_models</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">2</span>
+                Set environment variables
+              </div>
+              <div class="terminal rounded-xl">
+                <div class="p-4 font-mono text-[13px] text-slate-300">
+                  <div class="text-slate-400">export CODEX_PROXY_UPSTREAM_BASE_URL=http://127.0.0.1:11434</div>
+                  <div class="text-slate-400">export CODEX_PROXY_UPSTREAM_MODEL=llama3.1:70b</div>
+                  <div class="text-slate-400">export CODEX_PROXY_PORT=8787</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">3</span>
+                Run the proxy
+              </div>
+              <div class="terminal rounded-xl">
+                <div class="p-4 font-mono text-[13px] text-slate-300">
+                  <div class="text-slate-400">python -m codex_proxy_for_all_models</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Config Panel -->
+          <div>
+            <div class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+              <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">4</span>
+              Update Codex config
+            </div>
+            <div class="terminal h-[calc(100%-2rem)] min-h-[300px]">
+              <div class="flex items-center justify-between px-4 py-3 bg-[#0B1526] border-b border-white/5">
+                <div class="text-xs font-medium text-slate-400 font-mono">config.toml</div>
+                <button class="text-slate-500 hover:text-slate-300 transition-colors" aria-label="Copy code">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                </button>
+              </div>
+              <div class="p-6 font-mono text-[13px] leading-relaxed text-slate-300">
+<pre><code><span class="text-purple-400">[proxy]</span>
+<span class="text-cyan-400">provider</span> = <span class="text-emerald-400">"codex-proxy"</span>
+<span class="text-cyan-400">base_url</span> = <span class="text-emerald-400">"http://127.0.0.1:8787"</span>
+
+<span class="text-purple-400">[models]</span>
+<span class="text-cyan-400">default</span> = <span class="text-emerald-400">"codex-balanced"</span></code></pre>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
