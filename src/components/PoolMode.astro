@@ -4,7 +4,7 @@
   <div class="max-w-[1180px] mx-auto">
     
     <!-- Header -->
-    <div class="text-center mb-8 max-w-2xl mx-auto">
+    <div class="text-center mb-8 max-w-2xl mx-auto reveal-on-scroll">
       <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-xs font-semibold text-blue-700 mb-6 tracking-wider">
         BUILT FOR RELIABILITY
       </div>
@@ -14,72 +14,88 @@
       </p>
     </div>
 
-    <!-- Structured Capability Cards Grid -->
-    <div class="pool-capabilities">
-      <div class="pool-capability-card">
-        <div class="pool-capability-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 11 3 3 3-3"/></svg>
+    <!-- Connected Capability Bar -->
+    <div class="capability-bar mb-10 reveal-on-scroll">
+      <div class="capability-bar-item group/item" data-tilt-card>
+        <div class="relative z-10">
+          <div class="pool-capability-icon text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 11 3 3 3-3"/></svg>
+          </div>
+          <h3 class="pool-capability-title">Failover</h3>
+          <p class="pool-capability-desc">Retry another provider when one fails.</p>
         </div>
-        <h3 class="pool-capability-title">Failover</h3>
-        <p class="pool-capability-desc">Automatically retries another provider when one fails.</p>
       </div>
       
-      <div class="pool-capability-card">
-        <div class="pool-capability-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+      <div class="capability-bar-item group/item" data-tilt-card>
+        <div class="relative z-10">
+          <div class="pool-capability-icon text-indigo-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+          </div>
+          <h3 class="pool-capability-title">Multi-key rotation</h3>
+          <p class="pool-capability-desc">Spread traffic across multiple API keys.</p>
         </div>
-        <h3 class="pool-capability-title">Multi-key rotation</h3>
-        <p class="pool-capability-desc">Spread traffic across multiple keys per provider.</p>
       </div>
 
-      <div class="pool-capability-card">
-        <div class="pool-capability-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div class="capability-bar-item group/item" data-tilt-card>
+        <div class="relative z-10">
+          <div class="pool-capability-icon text-purple-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="pool-capability-title">Cooldowns</h3>
+          <p class="pool-capability-desc">Pause unhealthy providers automatically.</p>
         </div>
-        <h3 class="pool-capability-title">Cooldowns</h3>
-        <p class="pool-capability-desc">Temporarily pauses unhealthy providers after errors.</p>
       </div>
 
-      <div class="pool-capability-card">
-        <div class="pool-capability-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+      <div class="capability-bar-item group/item" data-tilt-card>
+        <div class="relative z-10">
+          <div class="pool-capability-icon text-cyan-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+          </div>
+          <h3 class="pool-capability-title">Logical profiles</h3>
+          <p class="pool-capability-desc">Expose fast, balanced, and strong models.</p>
         </div>
-        <h3 class="pool-capability-title">Logical profiles</h3>
-        <p class="pool-capability-desc">Expose codex-fast, codex-balanced, and codex-strong to Codex.</p>
       </div>
     </div>
 
     <!-- Main Container -->
-    <div class="bg-white rounded-[20px] shadow-sm border border-slate-200/80 p-6 md:p-8">
+    <div class="bg-white rounded-[20px] shadow-sm border border-slate-200/80 p-6 md:p-8 reveal-on-scroll">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
         
         <!-- Left Column: Profile Cards & Diagram -->
         <div class="flex flex-col gap-6">
           <div class="text-[14px] font-bold text-slate-800">Available Profiles</div>
           <!-- Profile Cards -->
-          <div class="grid gap-3">
-            <div class="bg-slate-50/50 rounded-[14px] p-4 flex flex-col justify-center border-l-4 border-l-cyan-500 border-y border-r border-slate-200/50 h-[88px]">
+          <div class="grid grid-cols-1 gap-3">
+            <div class="bg-slate-50/50 rounded-[14px] p-4 flex flex-col justify-center border-l-4 border-l-cyan-500 border-y border-r border-slate-200/50 h-[88px] hover:border-slate-300 transition-colors" data-tilt-card>
               <div class="font-bold text-slate-900 text-[15px] mb-0.5">codex-fast</div>
               <div class="text-[13px] text-slate-500">Low latency. Optimized for speed and completions.</div>
             </div>
-            <div class="bg-slate-50/50 rounded-[14px] p-4 flex flex-col justify-center border-l-4 border-l-blue-500 border-y border-r border-slate-200/50 h-[88px]">
+            <div class="bg-slate-50/50 rounded-[14px] p-4 flex flex-col justify-center border-l-4 border-l-blue-500 border-y border-r border-slate-200/50 h-[88px] hover:border-slate-300 transition-colors" data-tilt-card>
               <div class="font-bold text-slate-900 text-[15px] mb-0.5">codex-balanced</div>
               <div class="text-[13px] text-slate-500">Best overall quality, cost, and latency. Default.</div>
             </div>
-            <div class="bg-slate-50/50 rounded-[14px] p-4 flex flex-col justify-center border-l-4 border-l-purple-500 border-y border-r border-slate-200/50 h-[88px]">
+            <div class="bg-slate-50/50 rounded-[14px] p-4 flex flex-col justify-center border-l-4 border-l-purple-500 border-y border-r border-slate-200/50 h-[88px] hover:border-slate-300 transition-colors" data-tilt-card>
               <div class="font-bold text-slate-900 text-[15px] mb-0.5">codex-strong</div>
               <div class="text-[13px] text-slate-500">Max quality for complex architectural tasks.</div>
             </div>
           </div>
 
           <!-- Routing Diagram -->
-          <div class="bg-slate-50/80 rounded-[14px] p-5 border border-slate-200/60">
-            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Live Routing Visualization</div>
+          <div class="bg-slate-50/80 rounded-[14px] p-5 border border-slate-200/60 relative overflow-hidden">
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 flex items-center justify-between">
+              <span>Live Routing Visualization</span>
+              <span class="flex items-center gap-1.5 text-[10px] text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-ping"></span>
+                ACTIVE PATH
+              </span>
+            </div>
             
-            <div class="flex flex-col gap-3 font-mono text-[12.5px]">
+            <div class="flex flex-col gap-3 font-mono text-[12.5px] relative z-10">
               <!-- Request -->
-              <div class="flex items-center justify-between bg-white border border-slate-200/80 p-3 rounded-[12px] shadow-sm">
-                <div class="flex items-center gap-2">
+              <div class="flex items-center justify-between bg-white border border-slate-200/80 p-3 rounded-[12px] shadow-sm relative overflow-hidden">
+                <!-- active line visual -->
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 animate-pulse"></div>
+                <div class="flex items-center gap-2 pl-1">
                   <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
                   <span class="font-bold text-slate-800">Request</span>
                 </div>
@@ -87,10 +103,11 @@
               </div>
 
               <!-- Arrow -->
-              <div class="flex justify-center -my-1 text-slate-300">&darr;</div>
+              <div class="flex justify-center -my-1 text-slate-300 font-bold animate-pulse">&darr;</div>
 
               <!-- NVIDIA (Primary) -->
-              <div class="flex items-center justify-between bg-white border border-slate-200/80 p-3 rounded-[12px] shadow-sm border-l-4 border-l-emerald-500">
+              <div class="flex items-center justify-between bg-white border border-slate-200/80 p-3 rounded-[12px] shadow-sm border-l-4 border-l-emerald-500 relative overflow-hidden">
+                <div class="absolute inset-0 bg-emerald-500/5 animate-pulse pointer-events-none"></div>
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                   <span class="font-bold text-slate-800">1. NVIDIA Build (Primary)</span>
@@ -102,12 +119,12 @@
               <div class="flex justify-center -my-1 text-slate-300">&darr;</div>
 
               <!-- OpenRouter (Fallback / Cooldown) -->
-              <div class="flex items-center justify-between bg-white border border-slate-200/80 p-3 rounded-[12px] shadow-sm border-l-4 border-l-amber-500">
+              <div class="flex items-center justify-between bg-white border border-slate-200/80 p-3 rounded-[12px] shadow-sm border-l-4 border-l-amber-500 opacity-60">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                   <span class="font-bold text-slate-800">2. OpenRouter (Fallback)</span>
                 </div>
-                <div class="text-slate-500">Weight: 1 &bull; <span class="text-amber-600 font-semibold">Cooldown (45s left)</span></div>
+                <div class="text-slate-500">Weight: 1 &bull; <span class="text-amber-600 font-semibold">Cooldown (45s)</span></div>
               </div>
             </div>
           </div>
@@ -118,7 +135,7 @@
         <div class="flex flex-col gap-6 h-full justify-between">
           
           <!-- Code Panel -->
-          <div class="terminal flex-1 min-h-[300px]">
+          <div class="terminal flex-1 min-h-[300px] hover:border-slate-300 transition-colors" data-tilt-card>
             <div class="flex items-center px-4 py-3 bg-[#0B1526] border-b border-white/5">
               <div class="mx-auto text-xs font-medium text-slate-400 font-mono">pool.yaml</div>
             </div>
@@ -177,60 +194,89 @@
 </section>
 
 <style>
-.pool-capabilities {
+.capability-bar {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin: 36px auto 28px;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(226,232,240,.95);
+  background: rgba(255,255,255,.84);
+  box-shadow: 0 12px 34px rgba(15,23,42,.04);
 }
 
-.pool-capability-card {
-  border: 1px solid rgba(226, 232, 240, 0.95);
-  background: rgba(255, 255, 255, 0.78);
-  border-radius: 14px;
-  padding: 16px;
-  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+.capability-bar-item {
+  position: relative;
+  padding: 20px 22px;
+  border-right: 1px solid rgba(226,232,240,.8);
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.pool-capability-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(79, 70, 229, 0.34);
-  box-shadow: 0 14px 34px rgba(37, 99, 235, 0.08);
+.capability-bar-item:last-child {
+  border-right: none;
+}
+
+.capability-bar-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(37,99,235,.06), rgba(124,58,237,.06));
+  opacity: 0;
+  transition: opacity 180ms ease;
+  z-index: 0;
+}
+
+.capability-bar-item:hover::before {
+  opacity: 1;
 }
 
 .pool-capability-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, rgba(59,130,246,.12), rgba(124,58,237,.12));
-  color: #4f46e5;
+  background: rgba(15, 23, 42, 0.03);
+  margin-bottom: 8px;
 }
 
 .pool-capability-title {
-  margin-top: 12px;
   font-size: 14px;
   font-weight: 700;
   color: #0f172a;
 }
 
 .pool-capability-desc {
-  margin-top: 4px;
-  font-size: 12.5px;
-  line-height: 1.45;
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 1.4;
   color: #64748b;
 }
 
 @media (max-width: 900px) {
-  .pool-capabilities {
+  .capability-bar {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .capability-bar-item:nth-child(2n) {
+    border-right: none;
+  }
+  .capability-bar-item:nth-child(1), .capability-bar-item:nth-child(2) {
+    border-bottom: 1px solid rgba(226,232,240,.8);
   }
 }
 
 @media (max-width: 560px) {
-  .pool-capabilities {
+  .capability-bar {
     grid-template-columns: 1fr;
+  }
+  .capability-bar-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(226,232,240,.8);
+  }
+  .capability-bar-item:last-child {
+    border-bottom: none;
   }
 }
 </style>

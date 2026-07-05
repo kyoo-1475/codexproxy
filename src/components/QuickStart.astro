@@ -3,13 +3,13 @@
 <section id="quick-start" class="py-16 md:py-20 px-4 bg-slate-900 border-y border-slate-800 text-slate-300">
   <div class="max-w-[800px] mx-auto">
     <!-- Header -->
-    <div class="text-center mb-10">
+    <div class="text-center mb-10 reveal-on-scroll">
       <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4">Quick Start</h2>
       <p class="text-slate-400">Get up and running in less than 60 seconds.</p>
     </div>
 
     <!-- Tabs Container -->
-    <div class="rounded-[18px] overflow-hidden bg-[#0F172A] border border-slate-800 shadow-2xl relative">
+    <div class="rounded-[18px] overflow-hidden bg-[#0F172A] border border-slate-800 shadow-2xl relative reveal-on-scroll">
       <!-- Tabs Nav -->
       <div class="flex items-center bg-[#0B1220] border-b border-slate-800 px-2 pt-2">
         <button id="btn-macos" onclick="switchTab('macos')" class="tab-btn px-5 py-2.5 bg-[#0F172A] rounded-t-lg font-medium text-blue-400 text-[13px] border-t border-x border-slate-700/50 -mb-[1px] transition-colors">macOS / Linux</button>
@@ -97,7 +97,7 @@
         </div>
 
         <!-- Codex Config -->
-        <div class="p-4 rounded-[14px] bg-[#0B1220] border border-white/5 relative">
+        <div class="p-4 rounded-[14px] bg-[#0B1220] border border-white/5 relative hover:border-slate-700 transition-colors" data-tilt-card>
           <div class="flex justify-between items-center mb-2">
             <div class="text-slate-400 font-sans text-xs font-semibold">~/.codex/config.toml</div>
             <button class="text-slate-500 hover:text-white transition-colors" aria-label="Copy code">
