@@ -13,45 +13,56 @@
     <!-- Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       
-      <!-- Card 1 -->
-      <div class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[96px] stagger-item group" data-tilt-card>
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 group-hover:text-blue-600 group-hover:-translate-y-0.5 transition-all shrink-0"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+      <!-- Card 1: Ollama -->
+      <a href="https://ollama.com/" target="_blank" rel="noopener noreferrer" class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[100px] rounded-[14px] stagger-item group" data-tilt-card>
+        <div class="w-11 h-11 rounded-[10px] bg-slate-50 border border-slate-200/60 flex items-center justify-center shrink-0 overflow-hidden">
+          <img src={`${import.meta.env.BASE_URL}logos/ollama.svg`} class="max-w-[28px] max-h-[28px] object-contain group-hover:scale-110 transition-transform" alt="Ollama logo" />
+        </div>
         <div class="flex-1 min-w-0">
           <div class="font-bold text-[15px] text-slate-900 leading-tight group-hover:-translate-y-[1px] transition-transform">Ollama</div>
           <div class="text-[13px] text-slate-500 mt-0.5 leading-snug opacity-80 group-hover:opacity-100 transition-opacity">Run models locally.</div>
         </div>
-        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-blue-500 shrink-0 hidden sm:block">
+        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-blue-600 shrink-0 hidden sm:block">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </div>
-      </div>
+      </a>
 
-      <!-- Card 2 -->
-      <div class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[96px] stagger-item group" data-tilt-card>
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 group-hover:text-indigo-600 group-hover:-translate-y-0.5 transition-all shrink-0"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <!-- Card 2: LM Studio -->
+      <a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer" class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[100px] rounded-[14px] stagger-item group" data-tilt-card>
+        <div class="w-11 h-11 rounded-[10px] bg-slate-50 border border-slate-200/60 flex items-center justify-center shrink-0 overflow-hidden">
+          <img src={`${import.meta.env.BASE_URL}logos/lmstudio.svg`} class="max-w-[28px] max-h-[28px] object-contain group-hover:scale-110 transition-transform" alt="LM Studio logo" />
+        </div>
         <div class="flex-1 min-w-0">
           <div class="font-bold text-[15px] text-slate-900 leading-tight group-hover:-translate-y-[1px] transition-transform">LM Studio</div>
           <div class="text-[13px] text-slate-500 mt-0.5 leading-snug opacity-80 group-hover:opacity-100 transition-opacity">Local inference made simple.</div>
         </div>
-        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-indigo-500 shrink-0 hidden sm:block">
+        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-indigo-600 shrink-0 hidden sm:block">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </div>
-      </div>
+      </a>
 
-      <!-- Card 3 -->
-      <div class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[96px] stagger-item group" data-tilt-card>
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 group-hover:text-blue-600 group-hover:-translate-y-0.5 transition-all shrink-0"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      <!-- Card 3: vLLM -->
+      <a href="https://vllm.ai/" target="_blank" rel="noopener noreferrer" class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[100px] rounded-[14px] stagger-item group" data-tilt-card>
+        <div class="w-11 h-11 rounded-[10px] bg-slate-50 border border-slate-200/60 flex items-center justify-center shrink-0 overflow-hidden">
+          <img src={`${import.meta.env.BASE_URL}logos/vllm.svg`} class="max-w-[28px] max-h-[28px] object-contain group-hover:scale-110 transition-transform" alt="vLLM logo" />
+        </div>
         <div class="flex-1 min-w-0">
           <div class="font-bold text-[15px] text-slate-900 leading-tight group-hover:-translate-y-[1px] transition-transform">vLLM</div>
           <div class="text-[13px] text-slate-500 mt-0.5 leading-snug opacity-80 group-hover:opacity-100 transition-opacity">High-throughput engine.</div>
         </div>
-        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-blue-500 shrink-0 hidden sm:block">
+        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-blue-600 shrink-0 hidden sm:block">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </div>
-      </div>
+      </a>
 
-      <!-- Card 4 -->
-      <div class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[96px] stagger-item group" data-tilt-card>
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 group-hover:text-cyan-600 group-hover:-translate-y-0.5 transition-all shrink-0"><polygon points="13 19 22 12 13 5 13 19"/><polygon points="2 19 11 12 2 5 2 19"/></svg>
+      <!-- Card 4: SGLang -->
+      <a href="https://docs.sglang.ai/" target="_blank" rel="noopener noreferrer" class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[100px] rounded-[14px] stagger-item group" data-tilt-card>
+        <div class="w-11 h-11 rounded-[10px] bg-slate-50 border border-slate-200/60 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-cyan-500 group-hover:scale-110 transition-transform">
+            <polyline points="13 17 18 12 13 7"></polyline>
+            <polyline points="6 17 11 12 6 7"></polyline>
+          </svg>
+        </div>
         <div class="flex-1 min-w-0">
           <div class="font-bold text-[15px] text-slate-900 leading-tight group-hover:-translate-y-[1px] transition-transform">SGLang</div>
           <div class="text-[13px] text-slate-500 mt-0.5 leading-snug opacity-80 group-hover:opacity-100 transition-opacity">Memory-efficient serving.</div>
@@ -59,55 +70,67 @@
         <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-cyan-500 shrink-0 hidden sm:block">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </div>
-      </div>
+      </a>
 
-      <!-- Card 5 -->
-      <div class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[96px] stagger-item group" data-tilt-card>
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 group-hover:text-emerald-600 group-hover:-translate-y-0.5 transition-all shrink-0"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+      <!-- Card 5: NVIDIA Build -->
+      <a href="https://build.nvidia.com/" target="_blank" rel="noopener noreferrer" class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[100px] rounded-[14px] stagger-item group" data-tilt-card>
+        <div class="w-11 h-11 rounded-[10px] bg-slate-50 border border-slate-200/60 flex items-center justify-center shrink-0 overflow-hidden">
+          <img src={`${import.meta.env.BASE_URL}logos/nvidia.svg`} class="max-w-[28px] max-h-[28px] object-contain group-hover:scale-110 transition-transform" alt="NVIDIA logo" />
+        </div>
         <div class="flex-1 min-w-0">
           <div class="font-bold text-[15px] text-slate-900 leading-tight group-hover:-translate-y-[1px] transition-transform">NVIDIA Build</div>
           <div class="text-[13px] text-slate-500 mt-0.5 leading-snug opacity-80 group-hover:opacity-100 transition-opacity">NVIDIA-hosted inference.</div>
         </div>
-        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-emerald-500 shrink-0 hidden sm:block">
+        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-emerald-600 shrink-0 hidden sm:block">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </div>
-      </div>
+      </a>
 
-      <!-- Card 6 -->
-      <div class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[96px] stagger-item group" data-tilt-card>
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 group-hover:text-purple-600 group-hover:-translate-y-0.5 transition-all shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+      <!-- Card 6: OpenRouter -->
+      <a href="https://openrouter.ai/" target="_blank" rel="noopener noreferrer" class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[100px] rounded-[14px] stagger-item group" data-tilt-card>
+        <div class="w-11 h-11 rounded-[10px] bg-slate-50 border border-slate-200/60 flex items-center justify-center shrink-0 overflow-hidden">
+          <img src={`${import.meta.env.BASE_URL}logos/openrouter.svg`} class="max-w-[28px] max-h-[28px] object-contain group-hover:scale-110 transition-transform" alt="OpenRouter logo" />
+        </div>
         <div class="flex-1 min-w-0">
           <div class="font-bold text-[15px] text-slate-900 leading-tight group-hover:-translate-y-[1px] transition-transform">OpenRouter</div>
           <div class="text-[13px] text-slate-500 mt-0.5 leading-snug opacity-80 group-hover:opacity-100 transition-opacity">Access hundreds of models.</div>
         </div>
-        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-purple-500 shrink-0 hidden sm:block">
+        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-purple-600 shrink-0 hidden sm:block">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </div>
-      </div>
+      </a>
 
-      <!-- Card 7 -->
-      <div class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[96px] stagger-item group" data-tilt-card>
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 group-hover:text-blue-600 group-hover:-translate-y-0.5 transition-all shrink-0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <!-- Card 7: DeepSeek -->
+      <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer" class="card p-4 flex flex-row items-center gap-4 text-left hover:border-slate-350 h-[100px] rounded-[14px] stagger-item group" data-tilt-card>
+        <div class="w-11 h-11 rounded-[10px] bg-slate-50 border border-slate-200/60 flex items-center justify-center shrink-0 overflow-hidden">
+          <img src={`${import.meta.env.BASE_URL}logos/deepseek.svg`} class="max-w-[28px] max-h-[28px] object-contain group-hover:scale-110 transition-transform" alt="DeepSeek logo" />
+        </div>
         <div class="flex-1 min-w-0">
           <div class="font-bold text-[15px] text-slate-900 leading-tight group-hover:-translate-y-[1px] transition-transform">DeepSeek</div>
           <div class="text-[13px] text-slate-500 mt-0.5 leading-snug opacity-80 group-hover:opacity-100 transition-opacity">Powerful code models.</div>
         </div>
-        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-blue-500 shrink-0 hidden sm:block">
+        <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-blue-600 shrink-0 hidden sm:block">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </div>
-      </div>
+      </a>
 
-      <!-- Card 8 -->
-      <div class="card p-4 flex flex-row items-center gap-4 text-left border-indigo-100 bg-gradient-to-br from-white to-indigo-50/50 hover:border-indigo-300 h-[96px] stagger-item group" data-tilt-card>
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-600 group-hover:text-indigo-700 group-hover:-translate-y-0.5 transition-all shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+      <!-- Card 8: Any API -->
+      <a href="#quick-start" class="card p-4 flex flex-row items-center gap-4 text-left border-indigo-100 bg-gradient-to-br from-white to-indigo-50/50 hover:border-indigo-300 h-[100px] rounded-[14px] stagger-item group" data-tilt-card>
+        <div class="w-11 h-11 rounded-[10px] bg-indigo-50 border border-indigo-200/60 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-600 group-hover:scale-110 transition-transform">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
         <div class="flex-1 min-w-0">
-          <div class="font-bold text-[15px] text-indigo-850 leading-tight group-hover:-translate-y-[1px] transition-transform">Any API</div>
+          <div class="font-bold text-[15px] text-indigo-900 leading-tight group-hover:-translate-y-[1px] transition-transform">Any API</div>
           <div class="text-[13px] text-slate-500 mt-0.5 leading-snug opacity-80 group-hover:opacity-100 transition-opacity">Any OpenAI-compatible API.</div>
         </div>
         <div class="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0 text-indigo-600 shrink-0 hidden sm:block">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
