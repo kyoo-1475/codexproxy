@@ -1,0 +1,27 @@
+---
+const providers = [
+  "Ollama",
+  "LM Studio",
+  "vLLM",
+  "SGLang",
+  "NVIDIA Build",
+  "OpenRouter",
+  "DeepSeek",
+  "Any OpenAI-Compatible"
+];
+---
+<section id="providers" class="py-20 px-4 border-y border-slate-200/60 bg-white/50">
+  <div class="max-w-[1180px] mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-3">Works with the tools you love.</h2>
+    <p class="text-slate-500 text-[17px] mb-12">Run anything. Connect everything.</p>
+
+    <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+      {providers.map((name) => (
+        <div class="flex items-center gap-2.5 px-5 py-2.5 bg-white border border-slate-200 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-blue-200 transition-all cursor-default">
+          <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+          <span class="font-medium text-slate-700 text-sm">{name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

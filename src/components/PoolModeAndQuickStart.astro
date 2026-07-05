@@ -1,0 +1,94 @@
+---
+---
+<section class="py-20 px-4" id="pool-mode">
+  <div class="max-w-[1180px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Pool Mode Card -->
+      <div class="premium-card p-8 md:p-10 flex flex-col h-full">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">Pool Mode</h2>
+        <p class="text-slate-500 mb-8">Curated fallback profiles for reliability and performance.</p>
+        
+        <div class="flex flex-col gap-4 flex-grow">
+          <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:border-blue-100 transition-colors">
+            <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-1.5 shrink-0"></div>
+            <div>
+              <h4 class="font-semibold text-slate-800 text-sm mb-1 font-mono">codex-fast</h4>
+              <p class="text-slate-500 text-sm">Optimized for speed and responsiveness.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:border-blue-100 transition-colors">
+            <div class="w-2.5 h-2.5 rounded-full bg-indigo-500 mt-1.5 shrink-0"></div>
+            <div>
+              <h4 class="font-semibold text-slate-800 text-sm mb-1 font-mono">codex-balanced</h4>
+              <p class="text-slate-500 text-sm">Best balance of quality and throughput.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:border-blue-100 transition-colors">
+            <div class="w-2.5 h-2.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></div>
+            <div>
+              <h4 class="font-semibold text-slate-800 text-sm mb-1 font-mono">codex-strong</h4>
+              <p class="text-slate-500 text-sm">Maximum quality for complex tasks.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center px-4 py-3 rounded-xl bg-purple-50 text-purple-700 text-sm font-medium border border-purple-100/50">
+          Automatic failover keeps you productive.
+        </div>
+      </div>
+
+      <!-- Quick Start Card -->
+      <div class="premium-card p-8 md:p-10 flex flex-col h-full" id="quick-start">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">Quick Start</h2>
+        <p class="text-slate-500 mb-8">Get up and running in minutes.</p>
+
+        <div class="flex flex-col gap-6 flex-grow">
+          <!-- Step 1 -->
+          <div class="flex items-start gap-4">
+            <div class="w-7 h-7 shrink-0 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm border border-blue-100">1</div>
+            <div class="w-full">
+              <h4 class="font-semibold text-slate-800 text-sm mb-2">Install</h4>
+              <div class="bg-slate-900 text-slate-300 font-mono text-[13px] px-4 py-2.5 rounded-xl overflow-x-auto border border-slate-800">
+                pip install codex-proxy
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start gap-4">
+            <div class="w-7 h-7 shrink-0 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm border border-blue-100">2</div>
+            <div class="w-full mt-1">
+              <h4 class="font-semibold text-slate-800 text-sm mb-1">Configure</h4>
+              <p class="text-slate-500 text-sm">Set your upstream endpoint and model.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start gap-4">
+            <div class="w-7 h-7 shrink-0 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm border border-blue-100">3</div>
+            <div class="w-full">
+              <h4 class="font-semibold text-slate-800 text-sm mb-2">Run</h4>
+              <div class="bg-slate-900 text-slate-300 font-mono text-[13px] px-4 py-2.5 rounded-xl overflow-x-auto border border-slate-800">
+                python -m codex_proxy_for_all_models
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex items-start gap-4">
+            <div class="w-7 h-7 shrink-0 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm border border-blue-100">4</div>
+            <div class="w-full mt-1">
+              <h4 class="font-semibold text-slate-800 text-sm mb-1">Connect</h4>
+              <p class="text-slate-500 text-sm">Point your IDE to <code class="text-blue-600 font-mono bg-blue-50 px-1.5 py-0.5 rounded">http://127.0.0.1:8787/v1</code></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
