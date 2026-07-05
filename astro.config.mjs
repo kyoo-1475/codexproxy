@@ -5,8 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://kyoo-369.github.io',
-  base: '/codexproxy_landing',
+  site: 'https://kyoo-1475.github.io',
+  base: '/codexproxy',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()]
