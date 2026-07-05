@@ -23,6 +23,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
 /* Page Background Gradient */
 .page-bg {
   position: fixed;
@@ -30,10 +35,9 @@ body {
   z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(circle at 12% 18%, rgba(59, 130, 246, 0.08), transparent 28%),
-    radial-gradient(circle at 88% 20%, rgba(124, 58, 237, 0.08), transparent 30%),
-    radial-gradient(circle at 50% 55%, rgba(14, 165, 233, 0.04), transparent 32%),
-    linear-gradient(180deg, #ffffff 0%, #f8fbff 42%, #ffffff 100%);
+    radial-gradient(circle at 20% 10%, rgba(59, 130, 246, 0.04), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(124, 58, 237, 0.04), transparent 35%),
+    linear-gradient(180deg, #ffffff 0%, #fdfdff 50%, #ffffff 100%);
 }
 
 .hero-orb::before {
@@ -42,9 +46,8 @@ body {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 0% 40%, rgba(59, 130, 246, 0.12), transparent 42%),
-    radial-gradient(ellipse at 100% 38%, rgba(124, 58, 237, 0.12), transparent 42%);
-  filter: blur(2px);
+    radial-gradient(ellipse at 50% 30%, rgba(59, 130, 246, 0.05), transparent 45%);
+  filter: blur(8px);
   z-index: -1;
 }
 
@@ -69,14 +72,14 @@ body {
 .card {
   background: rgba(255, 255, 255, 0.84);
   border: 1px solid rgba(226, 232, 240, 0.95);
-  border-radius: 16px;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.055);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 .card:hover {
   transform: translateY(-2px);
   border-color: rgba(59, 130, 246, 0.35);
-  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.10);
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.08);
 }
 
 /* Terminal Mockup */
@@ -94,18 +97,20 @@ body {
 .btn-primary {
   background: linear-gradient(90deg, #2563eb, #7c3aed);
   color: white;
-  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.15);
   transition: all 200ms ease;
 }
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 16px 32px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
 }
 
 .btn-secondary {
   background: white;
   color: #0f172a;
   border: 1px solid #dbe3ef;
+  border-radius: 10px;
   transition: all 200ms ease;
 }
 .btn-secondary:hover {
@@ -115,7 +120,7 @@ body {
 
 /* Navbar */
 .floating-navbar {
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(226, 232, 240, 0.9);
