@@ -104,28 +104,22 @@ function initTerminalLoop() {
       return;
     }
 
-    while (true) {
-      container.innerHTML = '';
+    container.innerHTML = '';
 
-      for (const command of commands) {
-        await typeLine(container, command, 12);
-        await sleep(200);
-      }
+    for (const command of commands) {
+      await typeLine(container, command, 12);
+      await sleep(200);
+    }
 
-      await sleep(300);
+    await sleep(300);
 
-      for (const line of intro) {
-        await appendLine(container, line);
-      }
+    for (const line of intro) {
+      await appendLine(container, line);
+    }
 
-      for (let i = 0; i < 2; i++) {
-        for (const log of logs) {
-          await appendLine(container, log);
-          await sleep(500);
-        }
-      }
-
-      await sleep(4000);
+    for (const log of logs) {
+      await appendLine(container, log);
+      await sleep(400);
     }
   }
 
