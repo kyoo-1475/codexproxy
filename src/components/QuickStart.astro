@@ -1,52 +1,105 @@
 ---
 ---
-<section id="quick-start" class="py-16 md:py-24 px-4 bg-slate-900 border-y border-slate-800 text-slate-300">
+<section id="quick-start" class="py-16 md:py-20 px-4 bg-slate-900 border-y border-slate-800 text-slate-300">
   <div class="max-w-[800px] mx-auto">
     <!-- Header -->
-    <div class="text-center mb-12">
+    <div class="text-center mb-10">
       <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4">Quick Start</h2>
       <p class="text-slate-400">Get up and running in less than 60 seconds.</p>
     </div>
 
     <!-- Tabs Container -->
-    <div class="rounded-xl overflow-hidden bg-[#0F172A] border border-slate-800 shadow-2xl">
+    <div class="rounded-[18px] overflow-hidden bg-[#0F172A] border border-slate-800 shadow-2xl relative">
       <!-- Tabs Nav -->
       <div class="flex items-center bg-[#0B1220] border-b border-slate-800 px-2 pt-2">
-        <div class="px-5 py-2.5 bg-[#0F172A] rounded-t-lg font-medium text-blue-400 text-sm border-t border-x border-slate-700/50 -mb-[1px]">macOS / Linux</div>
-        <div class="px-5 py-2.5 text-slate-500 font-medium text-sm">Windows PowerShell</div>
-        <div class="px-5 py-2.5 text-slate-500 font-medium text-sm">Docker</div>
+        <button id="btn-macos" onclick="switchTab('macos')" class="tab-btn px-5 py-2.5 bg-[#0F172A] rounded-t-lg font-medium text-blue-400 text-[13px] border-t border-x border-slate-700/50 -mb-[1px] transition-colors">macOS / Linux</button>
+        <button id="btn-windows" onclick="switchTab('windows')" class="tab-btn px-5 py-2.5 text-slate-500 font-medium text-[13px] border-t border-x border-transparent -mb-[1px] hover:text-slate-300 transition-colors">Windows PowerShell</button>
+        <button id="btn-docker" onclick="switchTab('docker')" class="tab-btn px-5 py-2.5 text-slate-500 font-medium text-[13px] border-t border-x border-transparent -mb-[1px] hover:text-slate-300 transition-colors">Docker</button>
       </div>
 
       <!-- Tab Content -->
-      <div class="p-6 md:p-8 font-mono text-[13px] leading-relaxed">
+      <div class="p-6 md:p-8 font-mono text-[13px] leading-relaxed relative min-h-[300px]">
         
-        <div class="mb-6">
-          <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">1. Clone &amp; Enter</div>
-          <div class="flex items-start gap-3">
-            <span class="text-emerald-400 shrink-0">$</span>
-            <span class="text-slate-300">git clone https://github.com/kyoo-147/codex_proxy_for_all_models.git<br/>cd codex_proxy_for_all_models</span>
+        <!-- MacOS / Linux -->
+        <div id="content-macos" class="tab-content">
+          <div class="mb-5">
+            <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">1. Clone &amp; Enter</div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 shrink-0">$</span>
+              <span class="text-slate-300">git clone https://github.com/kyoo-147/codex_proxy_for_all_models.git<br/>cd codex_proxy_for_all_models</span>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">2. Configure</div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 shrink-0">$</span>
+              <span class="text-slate-300"><span class="text-purple-400">export</span> CODEX_PROXY_UPSTREAM_BASE_URL=<span class="text-cyan-400">http://127.0.0.1:11434</span><br/><span class="text-purple-400">export</span> CODEX_PROXY_UPSTREAM_MODEL=<span class="text-cyan-400">llama3.1:70b</span></span>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">3. Run Proxy</div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 shrink-0">$</span>
+              <span class="text-slate-300"><span class="text-indigo-400">python</span> -m codex_proxy_for_all_models</span>
+            </div>
           </div>
         </div>
 
-        <div class="mb-6">
-          <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">2. Configure</div>
-          <div class="flex items-start gap-3">
-            <span class="text-emerald-400 shrink-0">$</span>
-            <span class="text-slate-300"><span class="text-purple-400">export</span> CODEX_PROXY_UPSTREAM_BASE_URL=<span class="text-cyan-400">http://127.0.0.1:11434</span><br/><span class="text-purple-400">export</span> CODEX_PROXY_UPSTREAM_MODEL=<span class="text-cyan-400">llama3.1:70b</span></span>
+        <!-- Windows PowerShell -->
+        <div id="content-windows" class="tab-content hidden">
+          <div class="mb-5">
+            <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">1. Clone &amp; Enter</div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 shrink-0">&gt;</span>
+              <span class="text-slate-300">git clone https://github.com/kyoo-147/codex_proxy_for_all_models.git<br/>cd codex_proxy_for_all_models</span>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">2. Configure</div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 shrink-0">&gt;</span>
+              <span class="text-slate-300"><span class="text-purple-400">$env:</span>CODEX_PROXY_UPSTREAM_BASE_URL=<span class="text-cyan-400">"http://127.0.0.1:11434"</span><br/><span class="text-purple-400">$env:</span>CODEX_PROXY_UPSTREAM_MODEL=<span class="text-cyan-400">"llama3.1:70b"</span></span>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">3. Run Proxy</div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 shrink-0">&gt;</span>
+              <span class="text-slate-300"><span class="text-indigo-400">python</span> -m codex_proxy_for_all_models</span>
+            </div>
           </div>
         </div>
 
-        <div class="mb-8">
-          <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">3. Run Proxy</div>
-          <div class="flex items-start gap-3">
-            <span class="text-emerald-400 shrink-0">$</span>
-            <span class="text-slate-300"><span class="text-indigo-400">python</span> -m codex_proxy_for_all_models</span>
+        <!-- Docker -->
+        <div id="content-docker" class="tab-content hidden">
+          <div class="mb-5">
+            <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">1. Build Image</div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 shrink-0">$</span>
+              <span class="text-slate-300"><span class="text-indigo-400">docker</span> build -t codex_proxy .</span>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">2. Run Container</div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 shrink-0">$</span>
+              <span class="text-slate-300"><span class="text-indigo-400">docker</span> run -d -p 8787:8787 \<br/>
+  -e CODEX_PROXY_UPSTREAM_BASE_URL=<span class="text-cyan-400">http://host.docker.internal:11434</span> \<br/>
+  -e CODEX_PROXY_UPSTREAM_MODEL=<span class="text-cyan-400">llama3.1:70b</span> \<br/>
+  codex_proxy</span>
+            </div>
           </div>
         </div>
 
-        <div class="p-5 rounded-lg bg-[#0B1220] border border-white/5">
-          <div class="flex justify-between items-center mb-3">
-            <div class="text-slate-400 font-sans text-xs font-semibold">Codex config.toml</div>
+        <!-- Codex Config -->
+        <div class="p-4 rounded-[14px] bg-[#0B1220] border border-white/5 relative">
+          <div class="flex justify-between items-center mb-2">
+            <div class="text-slate-400 font-sans text-xs font-semibold">~/.codex/config.toml</div>
             <button class="text-slate-500 hover:text-white transition-colors" aria-label="Copy code">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
@@ -63,3 +116,21 @@
     </div>
   </div>
 </section>
+
+<script is:inline>
+  function switchTab(tabName) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+    document.getElementById('content-' + tabName).classList.remove('hidden');
+    
+    document.querySelectorAll('.tab-btn').forEach(el => {
+      el.classList.remove('bg-[#0F172A]', 'text-blue-400', 'border-slate-700/50');
+      el.classList.add('text-slate-500', 'border-transparent');
+    });
+    
+    const activeBtn = document.getElementById('btn-' + tabName);
+    if(activeBtn) {
+      activeBtn.classList.remove('text-slate-500', 'border-transparent');
+      activeBtn.classList.add('bg-[#0F172A]', 'text-blue-400', 'border-slate-700/50');
+    }
+  }
+</script>

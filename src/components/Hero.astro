@@ -68,17 +68,17 @@
           </div>
           <!-- Content -->
           <div class="p-6 font-mono text-[13px] leading-relaxed text-slate-300">
-            <div class="flex items-start gap-3 mb-1">
+            <div class="flex items-start gap-3 mb-1 typing-line" style="animation-delay: 0s;">
               <span class="text-emerald-400 shrink-0">$</span>
               <span><span class="text-purple-400">export</span> CODEX_PROXY_UPSTREAM_BASE_URL=<span class="text-cyan-400">http://127.0.0.1:11434</span></span>
             </div>
-            <div class="flex items-start gap-3 mb-1">
+            <div class="flex items-start gap-3 mb-1 typing-line" style="animation-delay: 0.8s;">
               <span class="text-emerald-400 shrink-0">$</span>
               <span><span class="text-purple-400">export</span> CODEX_PROXY_UPSTREAM_MODEL=<span class="text-cyan-400">llama3.1:70b</span></span>
             </div>
-            <div class="flex items-start gap-3 mb-6">
+            <div class="flex items-start gap-3 mb-6 typing-line" style="animation-delay: 1.6s;">
               <span class="text-emerald-400 shrink-0">$</span>
-              <span><span class="text-indigo-400">python</span> -m codex_proxy_for_all_models</span>
+              <span><span class="text-indigo-400">python</span> -m codex_proxy_for_all_models<span class="animate-blink bg-slate-300 w-1.5 h-3.5 inline-block ml-1 align-middle"></span></span>
             </div>
             
             <div class="text-slate-400 font-bold mb-1">Codex Proxy for All Models</div>
@@ -106,15 +106,15 @@
               <span><span class="text-blue-400">INFO:</span> Listening on http://127.0.0.1:8787</span>
             </div>
 
-            <div class="flex items-start gap-3 mb-1 text-slate-400">
+            <div class="opacity-0 flex items-start gap-3 mb-1 text-slate-400" style="animation: reveal 0.1s forwards 2.5s;">
               <span class="text-slate-600 shrink-0">12:41:02</span>
               <span><span class="text-amber-400">GET </span> /models       <span class="text-emerald-400">200 OK</span>  <span class="text-slate-500">132ms</span></span>
             </div>
-            <div class="flex items-start gap-3 mb-1 text-slate-400">
+            <div class="opacity-0 flex items-start gap-3 mb-1 text-slate-400" style="animation: reveal 0.1s forwards 2.8s;">
               <span class="text-slate-600 shrink-0">12:41:02</span>
               <span><span class="text-purple-400">POST</span> /responses    <span class="text-emerald-400">200 OK</span>  <span class="text-slate-500">825ms</span></span>
             </div>
-            <div class="flex items-start gap-3 text-slate-400">
+            <div class="opacity-0 flex items-start gap-3 text-slate-400" style="animation: reveal 0.1s forwards 3.1s;">
               <span class="text-slate-600 shrink-0">12:41:05</span>
               <span><span class="text-purple-400">POST</span> /responses    <span class="text-emerald-400">200 OK</span>  <span class="text-slate-500">643ms</span></span>
             </div>

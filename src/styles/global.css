@@ -28,6 +28,10 @@ html {
   scroll-padding-top: 120px;
 }
 
+@keyframes reveal {
+  to { opacity: 1; }
+}
+
 /* Page Background Gradient */
 .page-bg {
   position: fixed;
