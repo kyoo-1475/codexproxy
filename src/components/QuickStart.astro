@@ -34,7 +34,7 @@
             <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">2. Configure</div>
             <div class="flex items-start gap-3">
               <span class="text-emerald-400 shrink-0">$</span>
-              <span class="text-slate-300"><span class="text-purple-400">export</span> CODEX_PROXY_UPSTREAM_BASE_URL=<span class="text-cyan-400">http://127.0.0.1:11434</span><br/><span class="text-purple-400">export</span> CODEX_PROXY_UPSTREAM_MODEL=<span class="text-cyan-400">llama3.1:70b</span></span>
+              <span class="text-slate-300"><span class="text-purple-400">export</span> CODEX_PROXY_UPSTREAM_BASE_URL=<span class="text-cyan-400">http://127.0.0.1:11434/v1</span><br/><span class="text-purple-400">export</span> CODEX_PROXY_UPSTREAM_MODEL=<span class="text-cyan-400">llama3.1:70b</span></span>
             </div>
           </div>
 
@@ -61,7 +61,7 @@
             <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">2. Configure</div>
             <div class="flex items-start gap-3">
               <span class="text-emerald-400 shrink-0">&gt;</span>
-              <span class="text-slate-300"><span class="text-purple-400">$env:</span>CODEX_PROXY_UPSTREAM_BASE_URL=<span class="text-cyan-400">"http://127.0.0.1:11434"</span><br/><span class="text-purple-400">$env:</span>CODEX_PROXY_UPSTREAM_MODEL=<span class="text-cyan-400">"llama3.1:70b"</span></span>
+              <span class="text-slate-300"><span class="text-purple-400">$env:</span>CODEX_PROXY_UPSTREAM_BASE_URL = <span class="text-cyan-400">"http://127.0.0.1:11434/v1"</span><br/><span class="text-purple-400">$env:</span>CODEX_PROXY_UPSTREAM_MODEL = <span class="text-cyan-400">"llama3.1:70b"</span></span>
             </div>
           </div>
 
@@ -77,21 +77,9 @@
         <!-- Docker -->
         <div id="content-docker" class="tab-content hidden">
           <div class="mb-5">
-            <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">1. Build Image</div>
-            <div class="flex items-start gap-3">
-              <span class="text-emerald-400 shrink-0">$</span>
-              <span class="text-slate-300"><span class="text-indigo-400">docker</span> build -t codex_proxy .</span>
-            </div>
-          </div>
-
-          <div class="mb-8">
-            <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">2. Run Container</div>
-            <div class="flex items-start gap-3">
-              <span class="text-emerald-400 shrink-0">$</span>
-              <span class="text-slate-300"><span class="text-indigo-400">docker</span> run -d -p 8787:8787 \<br/>
-  -e CODEX_PROXY_UPSTREAM_BASE_URL=<span class="text-cyan-400">http://host.docker.internal:11434</span> \<br/>
-  -e CODEX_PROXY_UPSTREAM_MODEL=<span class="text-cyan-400">llama3.1:70b</span> \<br/>
-  codex_proxy</span>
+            <div class="text-slate-500 mb-2 font-sans text-xs uppercase tracking-wider font-semibold">Deployment Information</div>
+            <div class="text-slate-300 leading-relaxed font-sans text-sm">
+              Docker support can be added with a small image, but this repo is designed to run directly with Python.
             </div>
           </div>
         </div>
@@ -104,12 +92,14 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
           </div>
-<pre class="m-0 text-slate-300"><code><span class="text-purple-400">[proxy]</span>
-<span class="text-cyan-400">provider</span> = <span class="text-emerald-400">"codex-proxy"</span>
-<span class="text-cyan-400">base_url</span> = <span class="text-emerald-400">"http://127.0.0.1:8787"</span>
+<pre class="m-0 text-slate-300"><code><span class="text-cyan-400">model</span> = <span class="text-emerald-400">"llama3.1:70b"</span>
+<span class="text-cyan-400">model_provider</span> = <span class="text-emerald-400">"local_model_proxy"</span>
 
-<span class="text-purple-400">[models]</span>
-<span class="text-cyan-400">default</span> = <span class="text-emerald-400">"codex-balanced"</span></code></pre>
+<span class="text-purple-400">[model_providers.local_model_proxy]</span>
+<span class="text-cyan-400">name</span> = <span class="text-emerald-400">"Local Model Proxy"</span>
+<span class="text-cyan-400">base_url</span> = <span class="text-emerald-400">"http://127.0.0.1:8787"</span>
+<span class="text-cyan-400">wire_api</span> = <span class="text-emerald-400">"responses"</span>
+<span class="text-cyan-400">env_key</span> = <span class="text-emerald-400">"DUMMY_API_KEY"</span></code></pre>
         </div>
 
       </div>
