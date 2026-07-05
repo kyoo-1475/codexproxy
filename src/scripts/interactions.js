@@ -32,6 +32,35 @@ function initTerminalLoop() {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
+  // Time generator for live logs
+  let currentSecond = 8;
+  let currentMinute = 41;
+  let currentHour = 12;
+
+  function getNextTimestamp() {
+    currentSecond += Math.floor(Math.random() * 4) + 1;
+    if (currentSecond >= 60) {
+      currentSecond -= 60;
+      currentMinute += 1;
+      if (currentMinute >= 60) {
+        currentMinute -= 60;
+        currentHour = (currentHour + 1) % 24;
+      }
+    }
+    const h = String(currentHour).padStart(2, '0');
+    const m = String(currentMinute).padStart(2, '0');
+    const s = String(currentSecond).padStart(2, '0');
+    return `${h}:${m}:${s}`;
+  }
+
+  function generateLiveLog() {
+    const isPost = Math.random() > 0.3;
+    const method = isPost ? 'POST' : 'GET ';
+    const path = isPost ? '/responses  ' : '/models     ';
+    const latency = Math.floor(Math.random() * 500) + 100;
+    return `${getNextTimestamp()} ${method} ${path} 200 OK ${latency}ms`;
+  }
+
   async function typeLine(container, text, speed = 12) {
     const line = document.createElement('div');
     line.className = 'terminal-line mb-1';
@@ -67,9 +96,12 @@ function initTerminalLoop() {
     cursor.remove();
   }
 
-  async function appendLine(container, text) {
+  async function appendLine(container, text, isLiveLog = false) {
     const line = document.createElement('div');
     line.className = 'terminal-line mb-1 text-slate-400';
+    if (isLiveLog) {
+      line.classList.add('terminal-log-line');
+    }
     
     let html = text;
     html = html.replace(/(GET\s+)/g, '<span class="text-amber-400">$1</span>');
@@ -81,10 +113,21 @@ function initTerminalLoop() {
     
     line.innerHTML = html;
     container.appendChild(line);
+
+    if (isLiveLog) {
+      const liveLogs = container.querySelectorAll('.terminal-log-line');
+      if (liveLogs.length > 8) {
+        liveLogs[0].remove();
+      }
+    }
     await sleep(150);
   }
 
   async function runTerminalLoop(container) {
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      console.info('[CodexProxy] terminal loop started');
+    }
+
     if (motionReduced) {
       let staticHtml = '';
       commands.forEach(cmd => {
@@ -118,8 +161,16 @@ function initTerminalLoop() {
     }
 
     for (const log of logs) {
-      await appendLine(container, log);
+      await appendLine(container, log, true);
       await sleep(400);
+    }
+
+    // Continuous logging loop
+    while (true) {
+      const waitTime = 1200 + Math.random() * 600;
+      await sleep(waitTime);
+      const newLog = generateLiveLog();
+      await appendLine(container, newLog, true);
     }
   }
 
@@ -131,20 +182,25 @@ function initTiltCards() {
   if (motionReduced) return;
 
   document.querySelectorAll('[data-tilt-card]').forEach(card => {
-    card.addEventListener('mousemove', e => {
+    card.addEventListener('pointermove', e => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      const xc = rect.width / 2;
-      const yc = rect.height / 2;
-      const angleX = (yc - y) / 10;
-      const angleY = (x - xc) / 10;
-      card.style.setProperty('--rx', `${angleX}deg`);
-      card.style.setProperty('--ry', `${angleY}deg`);
-      card.style.transform = `perspective(900px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-3px)`;
+      
+      // Relative pointer position normalized from -0.5 to 0.5
+      const px = (x / rect.width) - 0.5;
+      const py = (y / rect.height) - 0.5;
+      
+      const maxRotate = 4;
+      const rx = -py * maxRotate;
+      const ry = px * maxRotate;
+      
+      card.style.setProperty('--rx', `${rx}deg`);
+      card.style.setProperty('--ry', `${ry}deg`);
+      card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-3px)`;
     });
     
-    card.addEventListener('mouseleave', () => {
+    card.addEventListener('pointerleave', () => {
       card.style.setProperty('--rx', '0deg');
       card.style.setProperty('--ry', '0deg');
       card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)';
